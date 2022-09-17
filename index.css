@@ -8,6 +8,8 @@ html{
     font-size: 15px;
     font-family: 'Alata', sans-serif;
 }
+
+
 header{
     background-image: url("images/mobile/image-hero.jpg");
     background-color: purple;
@@ -15,12 +17,41 @@ header{
     background-position: center;
     background-size: cover;
     object-fit: cover;
+    position: relative;
+}
+.bg-head-color{
+    position: relative;
+    display: none;
+}
+.bg-head-color.show{
+    display: block;
+}
+.bg-head-color::before{
+    position: absolute;
+    content: "";
+    width: 84%;
+    height: 100vh;
+    padding: 2rem;
+    background-color: black;
+    left: 0;
+    top: 0;
 }
 .nav-container{
     width: 90%;
     margin: 0 auto;
     padding: 1rem 0;
 }
+/* .nav-container::before{
+    position: absolute;
+    content: "";
+    width: 84%;
+    height: 50%;
+    padding: 2rem;
+    background-color: black;
+    left: 0;
+    top: 0;
+} */
+
 .logo img{
     width: 8em;
 }
@@ -39,7 +70,6 @@ header{
     display: block;
 }
 
-
 nav{
     display: flex;
     justify-content: space-between;
@@ -47,14 +77,11 @@ nav{
     padding: .8rem;
     background-color: transparent;
 }
-nav .show{
-    background-color: black;
-}
+
 nav ul{
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    align-items: center;
     margin-top: 2rem;
     width: 95%;
     transform: translate(-150%);
@@ -228,19 +255,6 @@ span{
     nav .show {
     background-color: transparent;
 }
-    /* h1{
-        width: 60%;
-    }
-   .hamburgers-container{
-       display: none;
-   } 
-   nav{
-     background-color: transparent;
-   }
-   nav ul{
-       transform: translate(0);
-       width: 50%;
-   } */
    .vr-section{
        position: relative;
    }
@@ -257,9 +271,6 @@ span{
        color: black;
        padding-bottom: 4rem;
    }
-
-
-
    .creation{
        display: grid;
        grid-template-columns: repeat(4, minmax(100px, 1fr));
